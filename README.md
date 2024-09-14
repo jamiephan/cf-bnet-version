@@ -23,7 +23,27 @@ https://wowdev.wiki/TACT
 
 The APIs will also contains a badge JSON response that is [shield.io](https://shields.io/badges/endpoint-badge) endpoint compatible.
 
-Some examples:
+### Usage
+
+Using example endpoint: `https://bnet-version.jamiephan.workers.dev/hero/us/VersionsName/badge`
+
+- URL:
+  - ```
+    https://img.shields.io/endpoint?url=https%3A%2F%2Fbnet-version.jamiephan.workers.dev%2Fhero%2Fus%2FVersionsName%2Fbadge
+    ```
+- HTML:
+  - ```html
+    <img
+      alt="Badge"
+      src="https://img.shields.io/endpoint?url=https%3A%2F%2Fbnet-version.jamiephan.workers.dev%2Fhero%2Fus%2FVersionsName%2Fbadge"
+    />
+    ```
+- Markdown:
+  - ```markdown
+    ![Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fbnet-version.jamiephan.workers.dev%2Fhero%2Fus%2FVersionsName%2Fbadge)
+    ```
+
+### Examples Badges
 
 | App                          | App ID    | `key=VersionsName` for the latest version                                                                                            | `key=BuildId` for the latest BuildId                                                                                            |
 | ---------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
