@@ -1,4 +1,5 @@
 import { Hono } from "hono";
+import { cors } from "hono/cors";
 import doc from "./doc";
 import BNetApp from "./BNetApp";
 import AppError from "./errors/AppError";
@@ -6,6 +7,8 @@ import ERROR_TYPE from "./errors/AppErrorType";
 import { getAppDescription } from "./mappings";
 
 const app = new Hono();
+
+app.use("*", cors());
 
 app.get("/", (c) => {
   return c.json(doc);
