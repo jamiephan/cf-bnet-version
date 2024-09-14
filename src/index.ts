@@ -1,8 +1,9 @@
 import { Hono } from "hono";
-import doc from "./doc.json";
+import doc from "./doc";
 import BNetApp from "./BNetApp";
 import AppError from "./errors/AppError";
 import ERROR_TYPE from "./errors/AppErrorType";
+import { getAppDescription } from "./mappings";
 
 const app = new Hono();
 
@@ -44,7 +45,7 @@ app.get("/:app/:region/:key/badge", async (c) => {
 
   return c.json({
     schemaVersion: 1,
-    label: app,
+    label: getAppDescription(app),
     message: await bNetapp.getData(),
     color: "#4381C3",
     namedLogo: "battledotnet",
