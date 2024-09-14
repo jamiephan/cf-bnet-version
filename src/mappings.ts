@@ -355,6 +355,12 @@ const mapping = [
     description: "Warcraft III: Reforged Beta",
     group: "Warcraft III",
   },
+  { app: "gryphon", description: "Warcraft Rumble", group: "Warcraft Rumble" },
+  {
+    app: "gryphondev",
+    description: "Warcraft Rumble Dev",
+    group: "Warcraft Rumble",
+  },
   {
     app: "wow",
     description: "World of Warcraft",
@@ -437,7 +443,7 @@ const mapping = [
   },
   {
     app: "wowz",
-    description: "World of Warcraft Submission (previously Vendor)",
+    description: "World of Warcraft Submission",
     group: "World of Warcraft",
   },
   {
@@ -447,7 +453,7 @@ const mapping = [
   },
   {
     app: "viperdev",
-    description: "Call of Duty: Black Ops 4 - Alpha",
+    description: "Call of Duty: Black Ops 4 Alpha",
     group: "Call of Duty",
   },
   {
@@ -502,22 +508,22 @@ const mapping = [
   },
   {
     app: "lazr",
-    description: "Call of Duty: MW2CR (Campaign Remastered)",
+    description: "Call of Duty: Modern Warfare (Campaign Remastered)",
     group: "Call of Duty",
   },
   {
     app: "lazrdev",
-    description: "Call of Duty: MW2CR Dev",
+    description: "Call of Duty: Modern Warfare (Campaign Remastered) Dev",
     group: "Call of Duty",
   },
   {
     app: "lazrv1",
-    description: "Call of Duty: MW2CR Vendor 1",
+    description: "Call of Duty: Modern Warfare (Campaign Remastered) Vendor 1",
     group: "Call of Duty",
   },
   {
     app: "lazrv2",
-    description: "Call of Duty: MW2CR Vendor 2",
+    description: "Call of Duty: Modern Warfare (Campaign Remastered) Vendor 2",
     group: "Call of Duty",
   },
   {
@@ -542,7 +548,7 @@ const mapping = [
   },
   {
     app: "wlbydev",
-    description: "Crash Bandicoot 4 Developing",
+    description: "Crash Bandicoot 4 Dev",
     group: "Crash Bandicoot 4",
   },
   {
@@ -587,7 +593,7 @@ const mapping = [
   },
   {
     app: "dst2dev",
-    description: 'Destiny 2 "takehome" Development',
+    description: 'Destiny 2 "takehome" Dev',
     group: "Destiny 2",
   },
   {
