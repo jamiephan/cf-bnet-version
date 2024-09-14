@@ -11,7 +11,7 @@
   },
   {
     "url": "/{app}/{region}/{key}",
-    "description": "Get the exact key data from the specific config",
+    "description": "Get the exact key data from the specific config. List of keys can be found on the CDN config response above.",
     "example": "/hero/us/VersionsName"
   },
   {
