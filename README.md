@@ -4,7 +4,7 @@ This repo is a simple HonoJS API server to fetch the latest app versions from Ba
 
 https://wowdev.wiki/TACT
 
-## API Spec:
+## API Spec
 
 - <code>GET /{app}</code>
   - Get all versions and CDN config for the app
@@ -67,7 +67,7 @@ Using example endpoint: `https://bnet-version.jamiephan.workers.dev/hero/us/Vers
 | Call of Duty: Vanguard       | `fore`    | ![Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fbnet-version.jamiephan.workers.dev%2Ffore%2Fus%2FVersionsName%2Fbadge)    | ![Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fbnet-version.jamiephan.workers.dev%2Ffore%2Fus%2FBuildId%2Fbadge)    |
 | Crash Bandicoot 4            | `wlby`    | ![Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fbnet-version.jamiephan.workers.dev%2Fwlby%2Fus%2FVersionsName%2Fbadge)    | ![Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fbnet-version.jamiephan.workers.dev%2Fwlby%2Fus%2FBuildId%2Fbadge)    |
 
-### Invalid Badges:
+### Invalid Badges
 
 Any errors (e.g invalid app or key), the badge API will also response the error message for the badge to display:
 
@@ -77,7 +77,7 @@ Any errors (e.g invalid app or key), the badge API will also response the error 
 | Invalid Region            | ![Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fbnet-version.jamiephan.workers.dev%2Fpro%2Fxyzxyz%2FVersionsName%2Fbadge) |
 | Invalid Key               | ![Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fbnet-version.jamiephan.workers.dev%2Fpro%2Fus%2FXyzXyzXyz%2Fbadge)        |
 
-## Development:
+## Development
 
 Simply run:
 
@@ -86,7 +86,7 @@ npm install
 npm run dev
 ```
 
-## Deployment:
+## Deployment
 
 Simply run: (it will open up browser to login into cloudflare worker)
 
