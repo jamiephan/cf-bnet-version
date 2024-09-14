@@ -1,22 +1,59 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
-import doc from "./doc";
+
 import BNetApp from "./BNetApp";
+import endpoints from "./docs/endpoints.json";
 import AppError from "./errors/AppError";
 import ERROR_TYPE from "./errors/AppErrorType";
-import { getAppDescription } from "./mappings";
+import mappings, { getAppDescription } from "./mappings";
 
 const app = new Hono();
 
 app.use("*", cors());
 
+// Documentation
 app.get("/", (c) => {
-  return c.json(doc);
+  return c.redirect("/_doc");
+});
+
+app.get("/_doc/:key?", (c) => {
+  const { key } = c.req.param();
+
+  const baseMessage = {
+    "@message": "This is a documentation endpoint at (/_doc/*)",
+    "@repo": "https://github.com/jamiephan/cf-bnet-version",
+    "@readme":
+      "https://github.com/jamiephan/cf-bnet-version/blob/master/README.md",
+  };
+
+  switch (key) {
+    case "endpoints":
+      return c.json({ ...baseMessage, endpoints });
+    case "mappings":
+      return c.json({ ...baseMessage, mappings });
+    default:
+      return c.json({
+        ...baseMessage,
+        docEndpoints: [
+          {
+            url: "/_doc/endpoints",
+            description: "All API endpoint documentations",
+          },
+          {
+            url: "/_doc/mappings",
+            description:
+              "A list of app to name mappings. e.g fenris -> Diablo IV",
+          },
+        ],
+      });
+  }
 });
 
 app.get("/favicon.ico", (c) => {
   throw new AppError("Not Found");
 });
+
+// =========================
 
 app.get("/:app", async (c) => {
   const { app } = c.req.param();

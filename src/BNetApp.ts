@@ -2,7 +2,7 @@ import AppError from "./errors/AppError";
 import AppErrorType from "./errors/AppErrorType";
 
 interface IBnetAppRegionalResult {
-  [key: string]: String;
+  [key: string]: string;
 }
 
 class BNetApp {
