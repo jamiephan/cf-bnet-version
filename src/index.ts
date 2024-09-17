@@ -42,7 +42,7 @@ app.get("/_doc/:key?", (c) => {
           {
             url: "/_doc/mappings",
             description:
-              "A list of app to name mappings. e.g fenris -> Diablo IV",
+              "A list of app to name mappings. e.g fenris ➡ Diablo IV",
           },
         ],
       });
